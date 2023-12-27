@@ -1,0 +1,29 @@
+services:
+  bedrockconnect:
+    image: strausmann/minecraft-bedrock-connect
+    restart: always
+    environment:
+      NODB: "true"
+      CUSTOM_SERVERS: "/config/servers.json"
+      SERVER_LIMIT: 25
+    ports:
+      - "19132:19132/udp"
+    volumes:
+      - "./bedrockconnect:/config:Z"
+
+  minecraft:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+      - "25565:25565"
+      - "19133:19132/udp"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      PLUGINS: |
+        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
+        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+    volumes:
+      - "./minecraft:/data:Z"

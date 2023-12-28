@@ -23,4 +23,4 @@ Then add DNS entries for each map in `minecraft_router`:
 | vanilla.minecraft.lan |
 | disneyland.minecraft.lan |
 
-These entries should correspond with the entries in [`servers.json`](bedrockconnect/servers.json) and the `router` config in [`docker-compose.yml`](docker-compose.yml).
+These entries should correspond with the entries in [`servers.json`](bedrockconnect/servers.json) and the `router` config in [`docker-compose.yml`](docker-compose.yml#L67).

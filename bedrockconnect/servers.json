@@ -1,8 +1,14 @@
 [
 	{
-		"name": "Ender City",
+		"name": "Vanilla",
 		"iconUrl": "https://micdoodle8.com/wp-content/uploads/2023/07/enderman-micdoodle8-1-1024x571.jpg",
-		"address": "media.lan",
+		"address": "qube.lan",
 		"port": 19133
+	},
+	{
+		"name": "Disneyland",
+		"iconUrl": "https://micdoodle8.com/wp-content/uploads/2023/07/enderman-micdoodle8-1-1024x571.jpg",
+		"address": "qube.lan",
+		"port": 19134
 	}
 ]

@@ -12,7 +12,7 @@ This will read [`minecraft/worlds.json`](minecraft/worlds.json) and start a serv
 
 Each server we setup from `worlds.json` needs a DNS entry set up. For example, if you have a server named `vanilla`, you will need to add a DNS entry for `vanilla.minecraft.lan`.
 
-You can do this easily with OpenWRT by setting DHCP `addresses`:
+You don't have to do this with each individual hostname, though. You can do this easily with [OpenWRT](https://openwrt.org/) by setting *Addresses* under *DHCP and DNS General Settings*:
 
 ```
 /minecraft.lan/192.168.1.123
@@ -20,7 +20,7 @@ You can do this easily with OpenWRT by setting DHCP `addresses`:
 
 ![fqdn](./fqdn.png)
 
-Be sure to change the IP address to match your host server.
+This will redirect `*.minecraft.lan` requests to your host server. Be sure to change the IP address to match your local server.
 
 ### Bedrock Edition
 

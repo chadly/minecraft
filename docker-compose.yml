@@ -11,12 +11,7 @@ services:
     container_name: minecraft_router
     image: itzg/mc-router
     restart: unless-stopped
-    environment:
-      MAPPING: |
-        vanilla.minecraft.lan=vanilla:25565
-        hogwarts.minecraft.lan=hogwarts:25565
-        minecity.minecraft.lan=minecity:25565
-        unknown_host.minecraft.lan=unknown_host:25565
-        winter.minecraft.lan=winter:25565
     ports:
       - "25565:25565"
+    environment:
+      MAPPING: __ROUTER_MAPPING__

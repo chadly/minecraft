@@ -12,60 +12,101 @@ services:
     volumes:
       - "./bedrockconnect:/config:Z"
 
-  vanilla:
-    container_name: minecraft_vanilla
-    image: itzg/minecraft-server
-    depends_on:
-      - bedrockconnect
-    tty: true
-    stdin_open: true
-    restart: unless-stopped
-    environment:
-      EULA: "TRUE"
-      TYPE: "PAPER"
-      MOTD: "Vanilla Juice"
-      DIFFICULTY: "normal"
-      PLUGINS: |
-        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
-        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
-    ports:
-      - "19133:19132/udp"
-    volumes:
-      - "./minecraft/vanilla:/data:Z"
-
-  disneyland:
-    container_name: minecraft_disneyland
-    image: itzg/minecraft-server
-    depends_on:
-      - bedrockconnect
-    tty: true
-    stdin_open: true
-    restart: unless-stopped
-    environment:
-      EULA: "TRUE"
-      TYPE: "PAPER"
-      MOTD: "Disneyland"
-      DIFFICULTY: "normal"
-      MODE: "creative"
-      SPIGET_RESOURCES: "114160"
-      PLUGINS: |
-        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
-        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
-    ports:
-      - "19134:19132/udp"
-    volumes:
-      - "./minecraft/disneyland:/data:Z"
-
   router:
     container_name: minecraft_router
     image: itzg/mc-router
-    depends_on:
-      - vanilla
-      - disneyland
     restart: unless-stopped
     environment:
       MAPPING: |
         vanilla.minecraft.lan=vanilla:25565
-        disneyland.minecraft.lan=disneyland:25565
+        hogwarts.minecraft.lan=hogwarts:25565
+        minecity.minecraft.lan=minecity:25565
+        unknown_host.minecraft.lan=unknown_host:25565
+        winter.minecraft.lan=winter:25565
     ports:
       - "25565:25565"
+
+  vanilla:
+    container_name: minecraft_vanilla
+    build:
+      context: ./minecraft
+    depends_on:
+      - bedrockconnect
+      - router
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      MOTD: "Vanilla Juice"
+    ports:
+      - "19133:19132/udp"
+    volumes:
+      - "./minecraft/worlds/vanilla:/data:Z"
+
+  hogwarts:
+    container_name: minecraft_hogwarts
+    build:
+      context: ./minecraft
+    depends_on:
+      - bedrockconnect
+      - router
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      MOTD: "Hogwarts Castle"
+    ports:
+      - "19134:19132/udp"
+    volumes:
+      - "./minecraft/worlds/hogwarts:/data:Z"
+
+  minecity:
+    container_name: minecraft_minecity
+    build:
+      context: ./minecraft
+    depends_on:
+      - bedrockconnect
+      - router
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      MOTD: "Minecity"
+    ports:
+      - "19135:19132/udp"
+    volumes:
+      - "./minecraft/worlds/minecity:/data:Z"
+
+  unknown_host:
+    container_name: minecraft_unknown_host
+    build:
+      context: ./minecraft
+    depends_on:
+      - bedrockconnect
+      - router
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      MOTD: "Unknown Host"
+    ports:
+      - "19136:19132/udp"
+    volumes:
+      - "./minecraft/worlds/unknown_host:/data:Z"
+
+  winter:
+    container_name: minecraft_winter
+    build:
+      context: ./minecraft
+    depends_on:
+      - bedrockconnect
+      - router
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      MOTD: "Winter Puzzleland"
+    ports:
+      - "19137:19132/udp"
+    volumes:
+      - "./minecraft/worlds/winter:/data:Z"

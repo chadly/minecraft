@@ -1,1 +1,4 @@
 minecraft/worlds
+docker-compose-worlds.yml
+bedrockconnect/servers.json
+bedrockconnect/servers.tmp

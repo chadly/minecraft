@@ -1,0 +1,22 @@
+[
+	{
+		"id": "vanilla",
+		"MOTD": "Vanilla Juice"
+	},
+	{
+		"id": "hogwarts",
+		"MOTD": "Hogwarts Castle"
+	},
+	{
+		"id": "minecity",
+		"MOTD": "Minecity"
+	},
+	{
+		"id": "unknown_host",
+		"MOTD": "Unknown Host"
+	},
+	{
+		"id": "winter",
+		"MOTD": "Winter Puzzleland"
+	}
+]

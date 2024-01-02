@@ -32,6 +32,7 @@ while read -r world; do
   cat << EOF >> docker-compose-worlds.yml
   $id:
     container_name: minecraft_$id
+    image: chadly/minecraft:latest
     build:
       context: ./minecraft
     depends_on:

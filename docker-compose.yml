@@ -1,6 +1,7 @@
 services:
   bedrockconnect:
     container_name: bedrock_connect
+    image: chadly/bedrockconnect:latest
     build:
       context: bedrockconnect
     restart: unless-stopped

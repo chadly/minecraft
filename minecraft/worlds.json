@@ -10,5 +10,9 @@
 	{
 		"id": "countries",
 		"MOTD": "Countries"
+	},
+	{
+		"id": "morph",
+		"MOTD": "Morphing Mayhem"
 	}
 ]

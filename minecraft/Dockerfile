@@ -2,7 +2,8 @@ FROM itzg/minecraft-server:stable as vanilla
 
 ENV TYPE=PAPER \
     EULA=TRUE \
-    DIFFICULTY=normal
+    DIFFICULTY=normal \
+    VERSION=1.19.4
 
 RUN mkdir -p /plugins
 RUN wget -O /plugins/geyser.jar https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot && \

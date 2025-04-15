@@ -1,18 +1,7 @@
 [
 	{
-		"id": "vanilla",
-		"MOTD": "Vanilla Juice"
-	},
-	{
-		"id": "minecity",
-		"MOTD": "Minecity"
-	},
-	{
-		"id": "countries",
-		"MOTD": "Countries"
-	},
-	{
-		"id": "morph",
-		"MOTD": "Morphing Mayhem"
+		"id": "cake_shop",
+		"name": "Cake Shop",
+		"gameMode": "survival"
 	}
 ]

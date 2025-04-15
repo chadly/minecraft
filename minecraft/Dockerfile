@@ -1,12 +1,6 @@
-FROM itzg/minecraft-server:stable as vanilla
+FROM itzg/minecraft-bedrock-server:latest
 
-ENV TYPE=PAPER \
-    EULA=TRUE \
-    DIFFICULTY=normal \
-    VERSION=1.19.4
-
-RUN mkdir -p /plugins
-RUN wget -O /plugins/geyser.jar https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot && \
-    wget -O /plugins/floodgate.jar https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
-
-COPY plugins/*.jar /plugins/
+ENV EULA=true \
+    TZ="America/Chicago" \
+    SERVER_NAME="Qube" \
+    ENABLE_LAN_VISIBILITY=true

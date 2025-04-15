@@ -1,9 +1,15 @@
 services:
   bedrockconnect:
     container_name: bedrock_connect
-    image: chadly/bedrockconnect:latest
-    build:
-      context: bedrockconnect
+    image: strausmann/minecraft-bedrock-connect
     restart: unless-stopped
+    environment:
+      NODB: true
+      CUSTOM_SERVERS: /config/servers.json
+      SERVER_LIMIT: 25
+      USER_SERVERS: true
+      FEATURED_SERVERS: false
     ports:
       - "19132:19132/udp"
+    volumes:
+      - "./bedrockconnect:/config:Z"

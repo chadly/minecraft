@@ -11,6 +11,8 @@ server_address="192.168.1.123"
 cp docker-compose.yml docker-compose-worlds.yml
 
 # Initialize servers.json
+mkdir -p bedrockconnect
+[ -f bedrockconnect/servers.json ] && rm bedrockconnect/servers.json
 echo "[]" > bedrockconnect/servers.json
 
 # Read each world from the JSON file
@@ -52,4 +54,4 @@ EOF
      bedrockconnect/servers.json > bedrockconnect/servers.tmp && mv bedrockconnect/servers.tmp bedrockconnect/servers.json
 done < <(cat minecraft/worlds.json | jq -c '.[]')
 
-docker-compose -f docker-compose-worlds.yml up --build
+docker-compose -f docker-compose-worlds.yml up

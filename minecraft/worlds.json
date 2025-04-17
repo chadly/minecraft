@@ -3,5 +3,10 @@
 		"id": "cake_shop",
 		"name": "Cake Shop",
 		"gameMode": "survival"
+	},
+	{
+		"id": "cool_creative",
+		"name": "Cool Creative",
+		"gameMode": "creative"
 	}
 ]

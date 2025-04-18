@@ -40,6 +40,7 @@ while read -r world; do
     environment:
       GAMEMODE: $gameMode
       LEVEL_NAME: "$name"
+      OPS: "2533274939375765,2535430013589908"
       ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
       LEVEL_TYPE: $levelType
     ports:
@@ -48,8 +49,6 @@ while read -r world; do
       - "./minecraft/worlds/$id:/data:Z"
 
 EOF
-
-  # Update servers.json file with the new server entry
   jq --arg name "$name" \
      --arg iconUrl "$icon_url" \
      --arg address "$server_address" \

@@ -3,12 +3,21 @@
 		"id": "cake_shop",
 		"name": "Cake Shop",
 		"gameMode": "survival",
-		"allowCheats": false
+		"allowCheats": false,
+		"levelType": "default"
 	},
 	{
 		"id": "cool_creative",
 		"name": "Cool Creative",
 		"gameMode": "creative",
-		"allowCheats": true
+		"allowCheats": true,
+		"levelType": "default"
+	},
+	{
+		"id": "flat_creative",
+		"name": "Flat Creative",
+		"gameMode": "creative",
+		"allowCheats": true,
+		"levelType": "flat"
 	}
 ]

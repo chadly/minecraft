@@ -20,6 +20,7 @@ while read -r world; do
   id=$(echo $world | jq -r '.id')
   name=$(echo $world | jq -r '.name')
   gameMode=$(echo $world | jq -r '.gameMode')
+  allowCheats=$(echo $world | jq -r '.allowCheats')
   port=$((base_port + 1))
   base_port=$port
 
@@ -38,6 +39,7 @@ while read -r world; do
     environment:
       GAMEMODE: $gameMode
       LEVEL_NAME: "$name"
+      ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
     ports:
       - "$port:19132/udp"
     volumes:

@@ -2,11 +2,13 @@
 	{
 		"id": "cake_shop",
 		"name": "Cake Shop",
-		"gameMode": "survival"
+		"gameMode": "survival",
+		"allowCheats": false
 	},
 	{
 		"id": "cool_creative",
 		"name": "Cool Creative",
-		"gameMode": "creative"
+		"gameMode": "creative",
+		"allowCheats": true
 	}
 ]

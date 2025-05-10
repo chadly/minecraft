@@ -19,5 +19,12 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "flat"
+	},
+	{
+		"id": "village_quest",
+		"name": "Village Quest",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default"
 	}
 ]

@@ -22,8 +22,25 @@ while read -r world; do
   gameMode=$(echo $world | jq -r '.gameMode')
   allowCheats=$(echo $world | jq -r '.allowCheats')
   levelType=$(echo $world | jq -r '.levelType')
+  
+  # Extract the seed value if it exists, otherwise it will be null/empty
+  seed=$(echo $world | jq -r '.seed // empty')
+  
   port=$((base_port + 1))
   base_port=$port
+
+  # Create environment variables block
+  env_block="GAMEMODE: $gameMode
+      LEVEL_NAME: \"$name\"
+      OPS: \"2533274939375765,2535430013589908\"
+      ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
+      LEVEL_TYPE: $levelType"
+  
+  # Add seed to environment block if provided
+  if [ -n "$seed" ]; then
+    env_block="$env_block
+      LEVEL_SEED: \"$seed\""
+  fi
 
   # Append the service configuration to the docker-compose-worlds.yml file
   cat << EOF >> docker-compose-worlds.yml
@@ -38,11 +55,7 @@ while read -r world; do
     stdin_open: true
     restart: unless-stopped
     environment:
-      GAMEMODE: $gameMode
-      LEVEL_NAME: "$name"
-      OPS: "2533274939375765,2535430013589908"
-      ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
-      LEVEL_TYPE: $levelType
+      $env_block
     ports:
       - "$port:19132/udp"
     volumes:

@@ -4,7 +4,7 @@
 ./start.sh
 ```
 
-This will read [`minecraft/worlds.json`](minecraft/worlds.json) and start a server for each world using `docker compose`.
+This will read [`worlds.json`](worlds.json) and start a server for each world using `docker compose`.
 
 ## Setup
 

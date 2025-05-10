@@ -31,7 +31,7 @@ while read -r world; do
     container_name: minecraft_$id
     image: chadly/minecraft:latest
     build:
-      context: ./minecraft
+      context: .
     depends_on:
       - bedrockconnect
     tty: true
@@ -46,7 +46,7 @@ while read -r world; do
     ports:
       - "$port:19132/udp"
     volumes:
-      - "./minecraft/worlds/$id:/data:Z"
+      - "./worlds/$id:/data:Z"
 
 EOF
   jq --arg name "$name" \
@@ -55,6 +55,6 @@ EOF
      --argjson port "$port" \
      '. += [{"name": $name, "iconUrl": $iconUrl, "address": $address, "port": $port}]' \
      bedrockconnect/servers.json > bedrockconnect/servers.tmp && mv bedrockconnect/servers.tmp bedrockconnect/servers.json
-done < <(cat minecraft/worlds.json | jq -c '.[]')
+done < <(cat worlds.json | jq -c '.[]')
 
 docker-compose -f docker-compose-worlds.yml up

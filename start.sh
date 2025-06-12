@@ -32,6 +32,7 @@ while read -r world; do
   # Create environment variables block
   env_block="GAMEMODE: $gameMode
       LEVEL_NAME: \"$name\"
+      FORCE_GAMEMODE: true
       OPS: \"2533274939375765,2535430013589908\"
       ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
       LEVEL_TYPE: $levelType"

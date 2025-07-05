@@ -7,6 +7,13 @@
 		"levelType": "default"
 	},
 	{
+		"id": "i_am_steve",
+		"name": "I Am Steve",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default"
+	},
+	{
 		"id": "cool_creative",
 		"name": "Cool Creative",
 		"gameMode": "creative",
@@ -19,20 +26,5 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "flat"
-	},
-	{
-		"id": "village_quest",
-		"name": "Village Quest",
-		"gameMode": "survival",
-		"allowCheats": false,
-		"levelType": "default"
-	},
-	{
-		"id": "mansion_world",
-		"name": "Woodland Mansion Adventure",
-		"gameMode": "creative",
-		"allowCheats": true,
-		"levelType": "default",
-		"seed": "165605352"
 	}
 ]

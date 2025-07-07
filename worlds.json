@@ -26,5 +26,13 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "flat"
+	},
+	{
+		"id": "village_thing",
+		"name": "Village Thing",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default",
+		"seed": "5706537577245775585"
 	}
 ]

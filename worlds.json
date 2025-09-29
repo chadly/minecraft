@@ -7,13 +7,6 @@
 		"levelType": "default"
 	},
 	{
-		"id": "i_am_steve",
-		"name": "I Am Steve",
-		"gameMode": "survival",
-		"allowCheats": false,
-		"levelType": "default"
-	},
-	{
 		"id": "cool_creative",
 		"name": "Cool Creative",
 		"gameMode": "creative",
@@ -26,21 +19,6 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "flat"
-	},
-	{
-		"id": "village_thing",
-		"name": "Village Thing",
-		"gameMode": "survival",
-		"allowCheats": false,
-		"levelType": "default",
-		"seed": "5706537577245775585"
-	},
-	{
-		"id": "creeper_family",
-		"name": "Creeper Family",
-		"gameMode": "creative",
-		"allowCheats": true,
-		"levelType": "default"
 	},
 	{
 		"id": "amazing_villages",

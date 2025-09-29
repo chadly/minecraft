@@ -34,5 +34,20 @@
 		"allowCheats": false,
 		"levelType": "default",
 		"seed": "5706537577245775585"
+	},
+	{
+		"id": "creeper_family",
+		"name": "Creeper Family",
+		"gameMode": "creative",
+		"allowCheats": true,
+		"levelType": "default"
+	},
+	{
+		"id": "amazing_villages",
+		"name": "Amazing Villages",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default",
+		"seed": "2019763973"
 	}
 ]

@@ -27,5 +27,13 @@
 		"allowCheats": false,
 		"levelType": "default",
 		"seed": "2019763973"
+	},
+	{
+		"id": "scooby_doo",
+		"name": "Scooby Doo",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default",
+		"seed": "-8220363168991283332"
 	}
 ]

@@ -7,13 +7,6 @@
 		"levelType": "default"
 	},
 	{
-		"id": "cool_creative",
-		"name": "Cool Creative",
-		"gameMode": "creative",
-		"allowCheats": true,
-		"levelType": "default"
-	},
-	{
 		"id": "flat_creative",
 		"name": "Flat Creative",
 		"gameMode": "creative",
@@ -21,19 +14,10 @@
 		"levelType": "flat"
 	},
 	{
-		"id": "amazing_villages",
-		"name": "Amazing Villages",
-		"gameMode": "survival",
-		"allowCheats": false,
-		"levelType": "default",
-		"seed": "2019763973"
-	},
-	{
-		"id": "scooby_doo",
-		"name": "Scooby Doo",
-		"gameMode": "survival",
-		"allowCheats": false,
-		"levelType": "default",
-		"seed": "-8220363168991283332"
+		"id": "castle_builds",
+		"name": "Castle Builds",
+		"gameMode": "creative",
+		"allowCheats": true,
+		"levelType": "flat"
 	}
 ]

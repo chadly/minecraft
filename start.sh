@@ -71,4 +71,4 @@ EOF
      bedrockconnect/servers.json > bedrockconnect/servers.tmp && mv bedrockconnect/servers.tmp bedrockconnect/servers.json
 done < <(cat worlds.json | jq -c '.[]')
 
-docker-compose -f docker-compose-worlds.yml up
+docker-compose -f docker-compose-worlds.yml up --remove-orphans

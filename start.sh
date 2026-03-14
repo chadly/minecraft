@@ -35,7 +35,9 @@ while read -r world; do
       FORCE_GAMEMODE: true
       OPS: \"2533274939375765,2535430013589908\"
       ALLOW_CHEATS: $([ "$allowCheats" = true ] && echo "true" || echo "false")
-      LEVEL_TYPE: $levelType"
+      LEVEL_TYPE: $levelType
+      VIEW_DISTANCE: 6
+      MAX_THREADS: 16"
   
   # Add seed to environment block if provided
   if [ -n "$seed" ]; then

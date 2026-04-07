@@ -19,5 +19,13 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "flat"
+	},
+	{
+		"id": "most_dangerous_world",
+		"name": "Most Dangerous World",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default",
+		"seed": "100000416638053171"
 	}
 ]

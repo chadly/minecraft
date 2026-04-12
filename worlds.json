@@ -27,5 +27,12 @@
 		"allowCheats": false,
 		"levelType": "default",
 		"seed": "100000416638053171"
+	},
+	{
+		"id": "baby_chicken_world",
+		"name": "Baby Chicken World",
+		"gameMode": "creative",
+		"allowCheats": true,
+		"levelType": "default"
 	}
 ]

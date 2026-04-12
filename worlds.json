@@ -34,5 +34,13 @@
 		"gameMode": "creative",
 		"allowCheats": true,
 		"levelType": "default"
+	},
+	{
+		"id": "floating_village",
+		"name": "Floating Village",
+		"gameMode": "creative",
+		"allowCheats": true,
+		"levelType": "default",
+		"seed": "7150234822435234242"
 	}
 ]

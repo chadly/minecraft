@@ -49,5 +49,19 @@
 		"allowCheats": true,
 		"levelType": "default",
 		"seed": "7150234822435234242"
+	},
+	{
+		"id": "impossible",
+		"name": "Impossible",
+		"gameMode": "survival",
+		"allowCheats": true,
+		"levelType": "default"
+	},
+	{
+		"id": "aliens",
+		"name": "Aliens",
+		"gameMode": "survival",
+		"allowCheats": false,
+		"levelType": "default"
 	}
 ]
